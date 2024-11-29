@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="modern-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="src.png" alt="SRC Logo"></a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">COMPANY</a></li>
+      </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1></h1>
+      <p></p>
+    </section>
+
+    <section class="schedule">
+      <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'floor1')">1ST FLOOR</button>
+        <button class="tab" onclick="openTab(event, 'floor2')">2ND FLOOR</button>
+        <button class="tab" onclick="openTab(event, 'floor3')">3RD FLOOR</button>
+      </div>
+
+      <div id="floor1" class="tab-content active">
+        <div class="classroom" data-room="Room 101" data-description="Office for NSTP activities.">
+          <img src="NSTP.jpeg" alt="NSTP OFFICE">
+          <p>NSTP OFFICE</p>
+          <button onclick="viewDetails('NSTP.jpeg', 'Office for NSTP activities.')">View Details</button>
+        </div>      
+        <div class="classroom" data-room="Room 102" data-description="Fitness and wellness center.">
+          <img src="PATHFIT.jpeg" alt="PATHFIT OFFICE">
+          <p>PATHFIT OFFICE</p>
+          <button onclick="viewDetails('PATHFIT.jpeg', 'Fitness and wellness center.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 103" data-description="Spacious conference room.">
+          <img src="CONFERENCE ROOM EXT.jpeg" alt="CONFERENCE ROOM">
+          <p>CONFERENCE ROOM</p>
+          <button onclick="viewDetails('CONFERENCE ROOM EXT.jpeg', 'Spacious conference room.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 104" data-description="Office for research ethics.">
+          <img src="RESEARCH ETHICS.jpeg" alt="RESEARCH ETHICS OFFICE">
+          <p>RESEARCH ETHICS OFFICE</p>
+          <button onclick="viewDetails('RESEARCH ETHICS.jpeg', 'Office for research ethics.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 105" data-description="Hub for research activities.">
+          <img src="RESEARCH OFFICE.jpeg" alt="RESEARCH OFFICE">
+          <p>RESEARCH OFFICE</p>
+          <button onclick="viewDetails('RESEARCH OFFICE.jpeg', 'Hub for research activities.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 106" data-description="Office for IGP programs.">
+          <img src="IGP.jpeg" alt="IGP OFFICE">
+          <p>IGP OFFICE</p>
+          <button onclick="viewDetails('IGP.jpeg', 'Office for IGP programs.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 107" data-description="Laboratory for research projects.">
+          <img src="RESEARCH LAB.jpeg" alt="RESEARCH LABORATORY">
+          <p>RESEARCH LABORATORY</p>
+          <button onclick="viewDetails('RESEARCH LAB.jpeg', 'Laboratory for research projects.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 108" data-description="Guidance and counseling services.">
+          <img src="GUIDANCE.jpeg" alt="GUIDANCE AND COUNSELING OFFICE">
+          <p>GUIDANCE AND COUNSELING OFFICE</p>
+          <button onclick="viewDetails('GUIDANCE.jpeg', 'Guidance and counseling services.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 109" data-description="Student government office.">
+          <img src="CSG.jpeg" alt="CSG OFFICE">
+          <p>CSG OFFICE</p>
+          <button onclick="viewDetails('CSG.jpeg', 'Student government office.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="Room 110" data-description="Student Affairs Services hub.">
+          <img src="SAS.jpeg" alt="SAS">
+          <p>SAS</p>
+          <button onclick="viewDetails('SAS.jpeg', 'Student Affairs Services hub.')">View Details</button>
+        </div>   
+      </div>     
+
+      <!-- Floor 2 -->
+      <div id="floor2" class="tab-content">
+        <div class="classroom" data-room="SC201" data-description="Large lecture hall with projector.">
+          <img src="201.jpeg" alt="SC201">
+          <p>SC201</p>
+          <button onclick="viewDetails('201.jpeg', 'Large lecture hall with projector.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC202" data-description="Seminar room for workshops.">
+          <img src="202.jpeg" alt="SC202">
+          <p>SC202</p>
+          <button onclick="viewDetails('202.jpeg', 'Seminar room for workshops.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC203" data-description="Collaborative space with whiteboards.">
+          <img src="203.jpeg" alt="SC203">
+          <p>SC203</p>
+          <button onclick="viewDetails('203.jpeg', 'Collaborative space with whiteboards.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC204" data-description="Auditorium for large lectures.">
+          <img src="204.jpeg" alt="SC204">
+          <p>SC204</p>
+          <button onclick="viewDetails('204.jpeg', 'Auditorium for large lectures.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC205" data-description="Flexible desks for group work.">
+          <img src="205.jpeg" alt="SC205">
+          <p>SC205</p>
+          <button onclick="viewDetails('205.jpeg', 'Flexible desks for group work.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="CASTLE" data-description="Modern room with video conferencing.">
+          <img src="CASTLE.jpeg" alt="CASTLE">
+          <p>CASTLE</p>
+          <button onclick="viewDetails('CASTLE.jpeg', 'Modern room with video conferencing.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="GENERAL SERVICES UNIT" data-description="Versatile space for events.">
+          <img src="GENERAL SERVICES.jpeg" alt="GENERAL SERVICES UNIT">
+          <p>GENERAL SERVICES UNIT</p>
+          <button onclick="viewDetails('GENERAL SERVICES.jpeg', 'Versatile space for events.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC208" data-description="Multimedia setup for presentations.">
+          <img src="208.jpeg" alt="SC208">
+          <p>SC208</p>
+          <button onclick="viewDetails('208.jpeg', 'Multimedia setup for presentations.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC209" data-description="Multimedia setup for presentations.">
+          <img src="209.jpeg" alt="SC209">
+          <p>SC209</p>
+          <button onclick="viewDetails('209.jpeg', 'Multimedia setup for presentations.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="PLANNING & DEVELOPMENT OFFICE" data-description="Office for planning activities.">
+          <img src="PLANNING.jpeg" alt="PLANNING & DEVELOPMENT OFFICE">
+          <p>PLANNING & DEVELOPMENT OFFICE</p>
+          <button onclick="viewDetails('PLANNING.jpeg', 'Office for planning activities.')">View Details</button>
+        </div>
+      </div>
+      
+      <!-- Floor 3 -->
+      <div id="floor3" class="tab-content">
+        <div class="classroom" data-room="SC301" data-description="Large lecture hall with projector.">
+          <img src="301.jpeg" alt="SC301">
+          <p>SC301</p>
+          <button onclick="viewDetails('301.jpeg', 'Large lecture hall with projector.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC302" data-description="Seminar room for workshops.">
+          <img src="302.jpeg" alt="SC302">
+          <p>SC302</p>
+          <button onclick="viewDetails('302.jpeg', 'Seminar room for workshops.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC303" data-description="Collaborative space with whiteboards.">
+          <img src="303.jpeg" alt="SC303">
+          <p>SC303</p>
+          <button onclick="viewDetails('303.jpeg', 'Collaborative space with whiteboards.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC304" data-description="Auditorium for large lectures.">
+          <img src="304.jpeg" alt="SC304">
+          <p>SC304</p>
+          <button onclick="viewDetails('304.jpeg', 'Auditorium for large lectures.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC305" data-description="Flexible desks for group work.">
+          <img src="305.jpeg" alt="SC305">
+          <p>SC305</p>
+          <button onclick="viewDetails('305.jpeg', 'Flexible desks for group work.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC306" data-description="Modern room with video conferencing.">
+          <img src="306.jpeg" alt="SC306">
+          <p>SC306</p>
+          <button onclick="viewDetails('306.jpeg', 'Modern room with video conferencing.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC307" data-description="Versatile space for events.">
+          <img src="307.jpeg" alt="SC307">
+          <p>SC307</p>
+          <button onclick="viewDetails('307.jpeg', 'Versatile space for events.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC308" data-description="Multimedia setup for presentations.">
+          <img src="308.jpeg" alt="SC308">
+          <p>SC308</p>
+          <button onclick="viewDetails('308.jpeg', 'Multimedia setup for presentations.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC309" data-description="Multimedia setup for presentations.">
+          <img src="309.jpeg" alt="SC309">
+          <p>SC309</p>
+          <button onclick="viewDetails('309.jpeg', 'Multimedia setup for presentations.')">View Details</button>
+        </div>
+        <div class="classroom" data-room="SC310" data-description="Multimedia setup for presentations.">
+          <img src="310.jpeg" alt="SC310">
+          <p>SC310</p>
+          <button onclick="viewDetails('310.jpeg', 'Multimedia setup for presentations.')">View Details</button>
+        </div>
+      </div>
+    </section>
+  </main>
+      
+  <!-- Modal Overlay -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="Classroom Image">
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <img id="overlay-image" src="" alt="Room Image">
+      <p id="overlay-description"></p>
+      <button onclick="closeOverlay()">Close</button>
+    </div>
+  </div>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-container">
+      <div class="footer-location">
+        <h3>Our Location</h3>
+        <p>143 POGI Street, SCR Building</p>
+        <p>Mampayag, Bukidnon, Philippines</p>
+        <p>Contact: +123 456 7890</p>
+      </div>
+      <div class="social-links">
+        <h3>Follow Us</h3>
+          <a href=https://www.facebook.com/profile.php?id=61569336940232&mibextid=ZbWKwL target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+          <a href=https://youtube.com/@scr.nbsc24?si=dcEmhczsgx3KBWWr target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
+          <a href=https://www.instagram.com/scr.nbsc24/profilecard/?igsh=MXN2ODZpYmVuemZ5aQ== target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+          <a href=https://www.tiktok.com/@hesuyammm8?_t=8rkzL2JiJIQ&_r=1 target="_blank"><img src="tiktok-icon.png" alt="TikTok"></a>
+      </div>
+    </div>
+    <img src="src.png" alt="Logo">
+    <p>&copy; 2024 SCR. All Rights Reserved.</p>
+  </footer>  
+
+  <script src="script.js"></script>
+</body>
+</html>
