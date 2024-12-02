@@ -1,7 +1,11 @@
 class LeafletMap {
     constructor(containerId, center, zoom) {
-        // Disable default zoom controls
-        this.map = L.map(containerId, { zoomControl: false }).setView(center, zoom);
+        // Disable default zoom controls and remove attribution control
+        this.map = L.map(containerId, { 
+            zoomControl: false, 
+            attributionControl: false // Disable the attribution control
+        }).setView(center, zoom);
+
         this.initTileLayer();
 
         // Add zoom controls at a new position (e.g., bottom-right)
@@ -16,36 +20,29 @@ class LeafletMap {
     // Initialize the tile layer
     initTileLayer() {
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            maxZoom: 18
         }).addTo(this.map);
     }
 
     // Add marker with custom icon and popup
     addMarker(lat, lng, message, imageUrl) {
-        // Create a custom icon
         const customIcon = L.icon({
             iconUrl: imageUrl,
-            iconSize: [50, 50],
+            iconSize: [40, 40],
             iconAnchor: [25, 50],
             popupAnchor: [0, -50]
         });
 
-        // Add marker with custom icon to the map
         const marker = L.marker([lat, lng], { icon: customIcon }).addTo(this.map);
 
-        // Create popup content
         const popupContent = `
             <div>
                 <img src="${imageUrl}" alt="Popup Image" style="width: 100%; max-width: 200px; height: auto; border-radius: 5px;"/>
                 <p>${message}</p>
             </div>
         `;
-
-        // Bind the popup to the marker
         marker.bindPopup(popupContent);
 
-        // Add click event to show a larger image
         marker.on('click', () => this.showModal(imageUrl, message));
     }
 
@@ -66,21 +63,18 @@ class LeafletMap {
 
         modal.innerHTML = `
             <div style="position: relative; max-width: 90%; max-height: 90%; text-align: center;">
-                <img id="modal-image" src="" alt="Large Image" style="max-width: 100%; max-height: 80%; border-radius: 5px;"/>
+                <img id="modal-image" src="" alt="Large Image" style="max-width: 60%; max-height: 60%; border-radius: 5px;"/>
                 <p id="modal-message" style="color: white; margin-top: 10px;"></p>
-                <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 20px; cursor: pointer;">&times;</button>
+                <button id="close-modal" style="position: fixed; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 20px; cursor: pointer;">&times;</button>
             </div>
         `;
-
         document.body.appendChild(modal);
 
-        // Add close functionality
         modal.querySelector('#close-modal').addEventListener('click', () => {
             modal.style.display = 'none';
         });
     }
 
-    // Show the modal with an image and message
     showModal(imageUrl, message) {
         const modal = document.getElementById('image-modal');
         const modalImage = document.getElementById('modal-image');
@@ -91,7 +85,6 @@ class LeafletMap {
         modal.style.display = 'flex';
     }
 
-    // Load markers from a JSON file
     loadMarkersFromJson(url) {
         fetch(url)
             .then(response => {
