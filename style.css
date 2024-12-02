@@ -146,8 +146,8 @@ header nav ul li a:hover {
   background: linear-gradient(45deg, #1e0b5f, #0362dd); 
   color: white;
   text-align: center;
-  padding: 300px 100px;
-  background-image: url('nbsc.jpeg'); 
+  padding: 25%;
+  background-image: url('./images/nbsc.jpeg'); 
   background-size: cover;
   background-position: center;
 }
@@ -234,9 +234,8 @@ header nav ul li a:hover {
 
 /* Mission, Vision, Team Section Design */
 .content-section {
-  margin: 60px auto;
+  margin: 30px auto; 
   padding: 30px;
-  margin-top: 60px;
   background-color: #ffffff;
   border-radius: 12px;
   max-width: 800px;
@@ -271,6 +270,10 @@ header nav ul li a:hover {
 
 .content-section ul li:last-child {
   border-bottom: none;
+}
+
+body {
+  padding-top: 80px; 
 }
 
 /* Schedule Section */
@@ -417,7 +420,7 @@ header nav ul li a:hover {
 /* Footer */
 footer {
   background-color: #1e0b5f; 
-  border-bottom: 2px solid #ffc400;
+  border-top: 2px solid #ffc400;
   color: white;
   text-align: center;
   padding: 20px 10px;
